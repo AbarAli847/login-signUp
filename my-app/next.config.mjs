@@ -2,14 +2,19 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    // 1️⃣ Allow specific domains
+    // Allow specific domains
     domains: ['5.imimg.com'],
 
-    // 2️⃣ Allow images from a specific hostname with any path
+    // Allow images from specific hostnames with any path
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'fashiondoctorz.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
         pathname: '/**',
       },
     ],
